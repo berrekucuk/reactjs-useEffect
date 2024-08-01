@@ -10,8 +10,11 @@ import ProductList from './products/ProductList'
 import ProductAdd from './products/ProductAdd'
 import ProductUpdate from './products/ProductUpdate'
 import ProductDetail from './products/ProductDetail'
+import AddProductMUI from './muiSample/AddProductMUI'
 
 function App() {
+
+  return <AddProductMUI/>
   return <>
   <ul style={{display:'flex', justifyContent:'space-evenly'}}>
     <Link to="/">Home</Link>
