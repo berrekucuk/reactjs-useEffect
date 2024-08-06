@@ -11,32 +11,45 @@ import ProductAdd from './products/ProductAdd'
 import ProductUpdate from './products/ProductUpdate'
 import ProductDetail from './products/ProductDetail'
 import AddProductMUI from './muiSample/AddProductMUI'
+import ProductsDataGrid from './muiSample/ProductsDataGrid'
+import AddSupplierMUI from './muiSample/AddSupplierMUI'
+import SuppliersDataGrid from './muiSample/SuppliersDataGrid'
 
 function App() {
 
-  return <AddProductMUI/>
   return <>
   <ul style={{display:'flex', justifyContent:'space-evenly'}}>
-    <Link to="/">Home</Link>
-    <Link to="/suppliers">Suppliers</Link>
-    <Link to="/products">Products</Link>
+    <Link to="/suppliers">Supplier</Link>
+    <Link to="/add-supplier"> Add Supplier</Link>
+
   </ul>
-
-  <Routes>
-    <Route path="/" element= {<HomePage/>}/>
-    <Route path='/suppliers' element={<List/>}/>
-    <Route path='/suppliers/add' element={<Add/>}/>
-    <Route path='/suppliers/update/:id' element={<Update/>}/>
-    <Route path='/suppliers/detail/:id' element={<Detail/>}/>
-
-    <Route path='/products' element={<ProductList/>}/>
-    <Route path='/products/product-add' element={<ProductAdd/>}/>
-    <Route path='/products/product-update/:id' element={<ProductUpdate/>}/>
-    <Route path='/products/product-detail/:id' element={<ProductDetail/>}/>
-    
-    <Route path='*' element={<NotFound/>}/>
-  </Routes>
+   <Routes>
+      <Route path='/add-supplier' element={<AddSupplierMUI/>}/> 
+      <Route path='/suppliers' element={<SuppliersDataGrid/>}/> 
+   </Routes>
   </>
+  // return <>
+  // <ul style={{display:'flex', justifyContent:'space-evenly'}}>
+  //   <Link to="/">Home</Link>
+  //   <Link to="/suppliers">Suppliers</Link>
+  //   <Link to="/products">Products</Link>
+  // </ul>
+
+  // <Routes>
+  //   <Route path="/" element= {<HomePage/>}/>
+  //   <Route path='/suppliers' element={<List/>}/>
+  //   <Route path='/suppliers/add' element={<Add/>}/>
+  //   <Route path='/suppliers/update/:id' element={<Update/>}/>
+  //   <Route path='/suppliers/detail/:id' element={<Detail/>}/>
+
+  //   <Route path='/products' element={<ProductList/>}/>
+  //   <Route path='/products/product-add' element={<ProductAdd/>}/>
+  //   <Route path='/products/product-update/:id' element={<ProductUpdate/>}/>
+  //   <Route path='/products/product-detail/:id' element={<ProductDetail/>}/>
+    
+  //   <Route path='*' element={<NotFound/>}/>
+  // </Routes>
+  // </>
 }
 
 export default App
